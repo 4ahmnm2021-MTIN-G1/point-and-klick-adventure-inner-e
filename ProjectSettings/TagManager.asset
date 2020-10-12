@@ -47,3 +47,6 @@ TagManager:
   - name: Layer1
     uniqueID: 3969926299
     locked: 0
+  - name: Canvas
+    uniqueID: 3337559781
+    locked: 0

@@ -44,8 +44,14 @@ TagManager:
   - name: Background
     uniqueID: 185035311
     locked: 0
+  - name: Layer05
+    uniqueID: 379962429
+    locked: 0
   - name: Layer1
     uniqueID: 3969926299
+    locked: 0
+  - name: Layer2
+    uniqueID: 359197009
     locked: 0
   - name: Canvas
     uniqueID: 3337559781

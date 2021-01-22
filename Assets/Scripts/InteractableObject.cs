@@ -26,8 +26,8 @@ public Image img;
     commandmenu.active = false; 
     }
 public void Update() 
-{
-    
+{ 
+   
 }
   public void OnMouseDown()
  {

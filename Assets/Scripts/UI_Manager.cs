@@ -4,12 +4,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+
 
 public class UI_Manager : MonoBehaviour
 {
  public InteractableObject activeIO;
  public Text dialog;
+ public GameObject Player;
+
 
 public void Displaytext()
 {
@@ -30,11 +32,12 @@ if (activeIO.img.sprite == activeIO.sr.sprite)
 {
 activeIO.gameObject.active = false; 
 
+}
+}
 
-}
-}
-public void ChangeScene(){
-SceneManager.LoadScene ("Schuppen");
+public void Teleport(){
+    //player.position.x = irgendwas
+Player.transform.Translate(65,1,0);
 }
 
 

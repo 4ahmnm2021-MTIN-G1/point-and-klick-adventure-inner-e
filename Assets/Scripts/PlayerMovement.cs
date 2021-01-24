@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,13 +18,6 @@ public float speed = 0.1f;
   }
     void Update()
     { 
-       if (Input.GetMouseButtonDown(0))
-       {
-        
- 
-       }     
-     
-      
       thisTransform.position = Vector3.MoveTowards(thisTransform.position,playerPos,speed);
     }
 

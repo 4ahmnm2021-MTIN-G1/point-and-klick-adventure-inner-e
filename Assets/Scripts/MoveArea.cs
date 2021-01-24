@@ -4,22 +4,12 @@ using UnityEngine;
 
 public class MoveArea : MonoBehaviour
 {
+    public PlayerMovement pm;
 
-
-public PlayerMovement pm;
-
-public void OnMouseDown()
+    public void OnMouseDown()
     {
-    pm.SetNewDestination();
-     Debug.Log("Klick erkannt");
+        pm.SetNewDestination();
+        Debug.Log("Klick erkannt");
     }
-
-
-
-
-
-
-
-
 }
-   
+

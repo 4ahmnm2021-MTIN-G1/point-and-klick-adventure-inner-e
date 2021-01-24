@@ -5,28 +5,35 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-public Transform thisTransform;   
-public Vector3 mousePos;
-public Vector3 worldPos;
-public Vector3 playerPos;
-public float speed = 0.1f;
+    public Transform thisTransform;
+    public Vector3 mousePos;
+    public Vector3 worldPos;
+    public Vector3 playerPos;
+    public float speed = 0.1f;
 
-  void Start(){
+    void Start()
+    {
 
-   playerPos = thisTransform.position;
+        playerPos = thisTransform.position;
 
-  }
+    }
     void Update()
-    { 
-      thisTransform.position = Vector3.MoveTowards(thisTransform.position,playerPos,speed);
+    {
+        if (thisTransform.position != playerPos)
+        {
+            thisTransform.position = Vector3.MoveTowards(thisTransform.position, playerPos, speed);
+        }
     }
 
     public void SetNewDestination()
     {
-         mousePos = Input.mousePosition; 
-         worldPos = Camera.main.ScreenToWorldPoint(mousePos); 
-         playerPos = new Vector3(worldPos.x,playerPos.y,playerPos.z);
-
+        mousePos = Input.mousePosition;
+        worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+        playerPos = new Vector3(worldPos.x, playerPos.y, playerPos.z);
+    }
+    public void SetDesinationTeleport()
+    {
+        playerPos = new Vector3(transform.position.x, playerPos.y, transform.position.z);
     }
 }
 

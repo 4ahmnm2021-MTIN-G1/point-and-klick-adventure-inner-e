@@ -44,7 +44,10 @@ public class UI_Manager : MonoBehaviour
         Player.transform.position = new Vector3(68, -4.03f, 0);
         pm.SetDesinationTeleport();
     }
-
-
+public void TeleportBack()
+{
+Player.transform.position = new Vector3(6, -4.03f, 0);
+  pm.SetDesinationTeleport();
+}
 }
 

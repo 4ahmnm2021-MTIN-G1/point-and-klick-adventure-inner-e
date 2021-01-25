@@ -1,4 +1,3 @@
-using System.Security.AccessControl;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,8 +22,20 @@ public class PlayerMovement : MonoBehaviour
         if (thisTransform.position != playerPos)
         {
             thisTransform.position = Vector3.MoveTowards(thisTransform.position, playerPos, speed);
+           
         }
-    }
+
+        if ( thisTransform.position.x < playerPos.x)
+        {
+          transform.rotation = Quaternion.Euler(0f,180f,0f);
+        }
+        else if (thisTransform.position.x > playerPos.x)
+        {
+            transform.rotation = Quaternion.Euler(0f,0f,0f);
+        }
+
+  }
+    
 
     public void SetNewDestination()
     {
